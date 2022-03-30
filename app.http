@@ -1,0 +1,57 @@
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+###
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+###
+GET http://localhost:3000/states/8/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+###
+GET http://localhost:3000/districts/322/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+###
+POST http://localhost:3000/districts/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}  
+
+###
+DELETE http://localhost:3000/districts/322/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+###
+PUT http://localhost:3000/districts/322/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+GET http://localhost:3000/states/2/stats/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQ4NjIyMjc1fQ.VNbULiet34xM1is-6JQRDjOcVykdFHpKUYCjY7DRfsw
+
+###
